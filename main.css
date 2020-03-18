@@ -1,1 +1,59 @@
-
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #2b2e4a; 
+    font-weight: bold;
+    font-family: sans-serif;
+}
+#container {
+    background-color: cadetblue;
+    width: 200px;
+    margin: auto;
+}
+#screen {
+    background-color: #2b191b;
+    height: 85px;
+    border: 1px solid black;
+}
+#keypad {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0;
+    width: 200px;
+    height: 250px;
+    background-image: linear-gradient(141deg, #ee0979,#ff6a00);
+    border-left: 1px black solid;
+    box-sizing: border-box;
+}
+#keypad > div {
+    background-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+    font-size: 100%;
+    vertical-align: middle;
+    text-align: center;
+    border-right: 1px black solid;
+    border-bottom: 1px black solid;
+    padding-top: 15px;
+    color: black
+}
+#keypad > div:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.row1 {
+    grid-row: 1/2;
+}
+.row2 {
+    grid-row: 2/3;
+}
+.row3 {
+    grid-row: 3/4;
+}
+.row4 {
+    grid-row: 4/5;
+}
+.row5 {
+    grid-row: 5/6;
+}
