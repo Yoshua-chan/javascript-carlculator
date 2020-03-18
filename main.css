@@ -1,19 +1,31 @@
+/* Background pattern from Toptal Subtle Patterns */
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
 * {
     margin: 0;
     padding: 0;
 }
 body {
-    background-color: #2b2e4a; 
+    background-image: url(/background/dark_matter3.png);
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+#mainheader {
+    background-color: #fe346e;
+    /*background-image: linear-gradient(to bottom right, rgba(238, 9, 121, 0.7), rgba(255, 106, 0, 0.7)); */
+    color: #303030;
+    padding: 10px;
+}
+#mainheader h5 {
+    color: rgba(48, 48, 48, 0.2) 
 }
 #container {
     background-color: cadetblue;
     width: 200px;
-    margin: auto;
+    margin: auto; 
+    margin-top: 70px;
 }
 #screen {
-    /*background-color: #2b191b;*/
     background-color: #1f1f1f;
     height: 85px;
     border: 1px solid black;
@@ -46,6 +58,9 @@ body {
 #keypad > div:hover {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.1);
+}
+#keypad > div:active {
+    background-color: rgba(0, 0, 0, 0.2);
 }
 .row1 {
     grid-row: 1/2;
