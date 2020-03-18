@@ -13,10 +13,15 @@ body {
     margin: auto;
 }
 #screen {
-    background-color: #2b191b;
+    /*background-color: #2b191b;*/
+    background-color: #1f1f1f;
     height: 85px;
     border: 1px solid black;
+    box-sizing: border-box;
+    padding: 10px;
+    color: #ee0979;
 }
+
 #keypad {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
