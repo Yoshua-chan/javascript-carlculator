@@ -27,13 +27,27 @@ body {
 }
 #screen {
     background-color: #1f1f1f;
-    height: 85px;
+    /* min-height: 85px; */
     border: 1px solid black;
     box-sizing: border-box;
-    padding: 10px;
     color: #ee0979;
+    word-break: break-all;
 }
-
+#screen div {
+    text-align: right;
+    
+}
+#upperscreen {
+    background-color: #2f2f2f;
+    font-size: 14px;
+    padding: 10px;
+    min-height: 37px;
+    box-sizing: border-box;
+}
+#mainscreen {
+    box-sizing: border-box;
+    padding: 0.85em;
+}
 #keypad {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
