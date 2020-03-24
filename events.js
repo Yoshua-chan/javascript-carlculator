@@ -4,6 +4,16 @@ numbers.forEach( (button) => {
         appendScreen(mainscreen, button.innerText);
     })
 })
+comma.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    if(checkComma() == false) {
+        if(mainscreen.innerHTML == '&nbsp;') {
+            appendScreen(mainscreen, '0'); 
+        }
+        appendScreen(mainscreen, comma.innerText);
+    }
+})
 c.addEventListener('click', (e) => {
     e.preventDefault();
     clearScreen(mainscreen);
@@ -40,7 +50,3 @@ equals.addEventListener('click', (e) => {
     e.preventDefault();
 
 });
-comma.addEventListener('click', (e) => {
-    e.preventDefault();
-
-})
