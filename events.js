@@ -16,37 +16,45 @@ comma.addEventListener('click', (e) => {
 })
 c.addEventListener('click', (e) => {
     e.preventDefault();
+    if(cleared == true) {
+        clearScreen(upperscreen);
+    }
     clearScreen(mainscreen);
 })
 backspace.addEventListener('click', (e) => {
     e.preventDefault();
     back(mainscreen);
 });
+
+equals.addEventListener('click', (e) => {
+    e.preventDefault();
+
+});
+
+/*          BASIC OPERATIONS           */
+divide.addEventListener('click', (e) => {
+    e.preventDefault();
+    basicOperation(divide.innerText);
+});
+multiply.addEventListener('click', (e) => {
+    e.preventDefault();
+    basicOperation(multiply.innerText);
+});
+minus.addEventListener('click', (e) => {
+    e.preventDefault();
+    basicOperation(minus.innerText);
+});
+plus.addEventListener('click', (e) => {
+    e.preventDefault();
+    basicOperation(plus.innerText);
+});
+
+/*      SPECIAL OPERATIONS      */
 mod.addEventListener('click', (e) => {
     e.preventDefault();
 
 });
 sqrt.addEventListener('click', (e) => {
-    e.preventDefault();
-
-});
-divide.addEventListener('click', (e) => {
-    e.preventDefault();
-
-});
-multiply.addEventListener('click', (e) => {
-    e.preventDefault();
-
-});
-minus.addEventListener('click', (e) => {
-    e.preventDefault();
-
-});
-plus.addEventListener('click', (e) => {
-    e.preventDefault();
-
-});
-equals.addEventListener('click', (e) => {
     e.preventDefault();
 
 });

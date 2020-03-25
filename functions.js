@@ -4,7 +4,6 @@ function back(screen) {
         screen.innerHTML = '&nbsp;';
         cleared = true;
     }
-    console.log(screen.innerHTML);
 }
 function appendScreen(screen, text) {
     if(screen.innerHTML == '&nbsp;') {
@@ -12,7 +11,6 @@ function appendScreen(screen, text) {
     }
     screen.innerText = screen.innerText.concat(text);
     cleared = false; 
-    console.log(screen.innerHTML);
 }
 function clearScreen(screen) {
     screen.innerHTML = '&nbsp;';
@@ -25,4 +23,10 @@ function checkComma() {
         }
     }
     return false;
+}
+function basicOperation(value) {
+    appendScreen(upperscreen, mainscreen.innerText);
+    clearScreen(mainscreen);
+    operation = value;
+    memory = Number(upperscreen.innerText);  
 }
