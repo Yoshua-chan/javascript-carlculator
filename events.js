@@ -4,6 +4,12 @@ numbers.forEach( (button) => {
         appendScreen(mainscreen, button.innerText);
     })
 })
+operations.forEach( (button) => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        basicOperation(button.innerText);
+    })
+});
 comma.addEventListener('click', (e) => {
     e.preventDefault();
     
@@ -31,25 +37,7 @@ equals.addEventListener('click', (e) => {
 
 });
 
-/*          BASIC OPERATIONS           */
-divide.addEventListener('click', (e) => {
-    e.preventDefault();
-    basicOperation(divide.innerText);
-});
-multiply.addEventListener('click', (e) => {
-    e.preventDefault();
-    basicOperation(multiply.innerText);
-});
-minus.addEventListener('click', (e) => {
-    e.preventDefault();
-    basicOperation(minus.innerText);
-});
-plus.addEventListener('click', (e) => {
-    e.preventDefault();
-    basicOperation(plus.innerText);
-});
-
-/*      SPECIAL OPERATIONS      */
+/*      SPECIAL OPERATIONS  */
 mod.addEventListener('click', (e) => {
     e.preventDefault();
 
