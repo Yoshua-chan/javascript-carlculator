@@ -25,8 +25,39 @@ function checkComma() {
     return false;
 }
 function basicOperation(value) {
+    clearScreen(upperscreen);
     appendScreen(upperscreen, mainscreen.innerText);
     clearScreen(mainscreen);
     operation = value;
-    memory = Number(upperscreen.innerText);  
+    memory = Number(upperscreen.innerText); 
+    console.log(value);  
 }
+ function calculate() {
+    let answer; 
+    current = Number(mainscreen.innerText);
+    switch(operation) {
+        case '+':
+            answer = memory + current;
+        break;
+        case '-':
+            answer = memory - current;
+        break;
+        case '÷':
+            answer = memory / current;
+        break;
+        case '×':
+            answer = memory * current;
+        break;
+        case 'mod':
+            answer = memory % current;
+        break;
+        default:
+            answer = 'error'
+        break;
+    }
+    clearScreen(upperscreen);
+    clearScreen(mainscreen);
+    appendScreen(mainscreen, answer);
+    memory = undefined;
+    current = undefined;
+} 

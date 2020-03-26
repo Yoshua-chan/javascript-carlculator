@@ -21,9 +21,11 @@ comma.addEventListener('click', (e) => {
     }
 })
 c.addEventListener('click', (e) => {
+    current = undefined;
     e.preventDefault();
     if(cleared == true) {
         clearScreen(upperscreen);
+        memory = undefined;
     }
     clearScreen(mainscreen);
 })
@@ -31,16 +33,9 @@ backspace.addEventListener('click', (e) => {
     e.preventDefault();
     back(mainscreen);
 });
-
 equals.addEventListener('click', (e) => {
     e.preventDefault();
-
-});
-
-/*      SPECIAL OPERATIONS  */
-mod.addEventListener('click', (e) => {
-    e.preventDefault();
-
+    calculate();
 });
 sqrt.addEventListener('click', (e) => {
     e.preventDefault();
