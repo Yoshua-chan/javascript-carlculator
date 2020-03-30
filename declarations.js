@@ -11,3 +11,4 @@ let current = 0;
 let memory = 0;
 let operation = '';
 let cleared = true; 
+let bul = false;

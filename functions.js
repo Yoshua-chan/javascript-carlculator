@@ -31,10 +31,16 @@ function basicOperation(value) {
     operation = value;
     memory = Number(upperscreen.innerText); 
     console.log(value);  
+    bul = false;
 }
  function calculate() {
-    let answer; 
+    let answer;
+    let t;
     current = Number(mainscreen.innerText);
+    t = current;
+    console.log('Before'); 
+    console.log(`Current: ${current}`); 
+    console.log(`Memory: ${memory}`); 
     switch(operation) {
         case '+':
             answer = memory + current;
@@ -58,6 +64,18 @@ function basicOperation(value) {
     clearScreen(upperscreen);
     clearScreen(mainscreen);
     appendScreen(mainscreen, answer);
-    memory = undefined;
     current = undefined;
-} 
+    if(bul == false) { //for repeating operations
+        memory = t;
+        bul = true;
+    }
+    console.log("after"); 
+    console.log(`Current: ${current}`); 
+    console.log(`Memory: ${memory}`); 
+}
+function squareroot(value) {
+    current = Number(mainscreen.innerText); 
+    let answer = Math.sqrt(current);
+    clearScreen(mainscreen); 
+    appendScreen(mainscreen, answer); 
+}

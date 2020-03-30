@@ -28,6 +28,7 @@ c.addEventListener('click', (e) => {
         memory = undefined;
     }
     clearScreen(mainscreen);
+    console.clear(); 
 })
 backspace.addEventListener('click', (e) => {
     e.preventDefault();
@@ -39,5 +40,5 @@ equals.addEventListener('click', (e) => {
 });
 sqrt.addEventListener('click', (e) => {
     e.preventDefault();
-
+    squareroot();
 });
