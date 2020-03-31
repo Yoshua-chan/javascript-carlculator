@@ -25,22 +25,22 @@ function checkComma() {
     return false;
 }
 function basicOperation(value) {
+    if(mtt == true) {
+        calculate();
+    }
     clearScreen(upperscreen);
     appendScreen(upperscreen, mainscreen.innerText);
     clearScreen(mainscreen);
     operation = value;
-    memory = Number(upperscreen.innerText); 
+    memory = Number(upperscreen.innerText);
     console.log(value);  
-    bul = false;
+    mtt = true;
 }
  function calculate() {
     let answer;
     let t;
     current = Number(mainscreen.innerText);
-    t = current;
-    console.log('Before'); 
-    console.log(`Current: ${current}`); 
-    console.log(`Memory: ${memory}`); 
+    if(bul == false) {t = current;}
     switch(operation) {
         case '+':
             answer = memory + current;
@@ -64,16 +64,9 @@ function basicOperation(value) {
     clearScreen(upperscreen);
     clearScreen(mainscreen);
     appendScreen(mainscreen, answer);
-    current = undefined;
-    if(bul == false) { //for repeating operations
-        memory = t;
-        bul = true;
-    }
-    console.log("after"); 
-    console.log(`Current: ${current}`); 
-    console.log(`Memory: ${memory}`); 
+    mtt = false;
 }
-function squareroot(value) {
+function squareroot() {
     current = Number(mainscreen.innerText); 
     let answer = Math.sqrt(current);
     clearScreen(mainscreen); 

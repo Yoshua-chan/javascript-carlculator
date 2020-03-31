@@ -12,3 +12,4 @@ let memory = 0;
 let operation = '';
 let cleared = true; 
 let bul = false;
+let mtt = false;

@@ -36,7 +36,9 @@ backspace.addEventListener('click', (e) => {
 });
 equals.addEventListener('click', (e) => {
     e.preventDefault();
-    calculate();
+    if(mtt == true) {
+        calculate();
+    }
 });
 sqrt.addEventListener('click', (e) => {
     e.preventDefault();
