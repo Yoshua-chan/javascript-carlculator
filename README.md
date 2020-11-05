@@ -1,2 +1,2 @@
 # javascript-carlculator
-kto ma wiedzieć, ten wie
+it's not reliable, just an exercise for js
